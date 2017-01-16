@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-    <title>Hello Meijun!</title>
+    <title>Hello dandan!</title>
     <style type="text/css">
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin:0;
@@ -101,15 +101,15 @@ body {
     <div id="map"></div>
 
 <!-- 指定全局的分享内容 -->
-<input id="wsContent" type="hidden" value="一个送给美君的生日礼物，也是送给所有异地恋人的礼物「变得是距离，不变的是坚持」。 via @LOO2K">
+<input id="wsContent" type="hidden" value="一个送给丹丹的生日礼物，也是送给所有恋人的礼物「消逝是时间，不变的是」。  @cuishuying">
 <!-- 指定全局的分享链接 -->
 <input id="wsUrl" type="hidden" value="http://liumeijun.com/">
 <!-- 指定全局的分享图片 -->
 <input id="wsPic" type="hidden" value="http://lukesign.qiniudn.com/social.png">
 
-<script type="text/javascript" src="http://lukesign.qiniudn.com/jquery.min.js"></script>
-<script type="text/javascript" src="http://lukesign.qiniudn.com/jquery.wshare.js"></script>
-<script type="text/javascript" src="http://lukesign.qiniudn.com/sm/soundmanager2-nodebug-jsmin.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.wshare.js"></script>
+<script type="text/javascript" src="./sm/script/soundmanager2-nodebug-jsmin.js"></script>
 <script type="text/javascript">
 (function(a,b){"use strict";var c=function(){var a=[["requestFullscreen","exitFullscreen","fullscreenchange","fullscreen","fullscreenElement"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitfullscreenchange","webkitIsFullScreen","webkitCurrentFullScreenElement"],["mozRequestFullScreen","mozCancelFullScreen","mozfullscreenchange","mozFullScreen","mozFullScreenElement"]];for(var c=0,d=a.length;c<d;c++){var e=a[c];if(e[1]in b)return e}}();if(!c)return a.screenfull=!1;var d="ALLOW_KEYBOARD_INPUT"in Element,e={init:function(){return b.addEventListener(c[2],function(a){e.isFullscreen=b[c[3]],e.element=b[c[4]],e.onchange(a)}),this},isFullscreen:b[c[3]],element:b[c[4]],request:function(a){a=a||b.documentElement,a[c[0]](d&&Element.ALLOW_KEYBOARD_INPUT),b.isFullscreen||a[c[0]]()},exit:function(){b[c[1]]()},toggle:function(a){this.isFullscreen?this.exit():this.request(a)},onchange:function(){}};a.screenfull=e.init()})(window,document)
 </script>
@@ -126,14 +126,14 @@ body {
 var MP_CEN = {lng: 3.894763, lat: 44.529534};
 // 中国中心
 var CN_CEN = {lng: 103.758427, lat: 36.172333};
-// 嘉应学院
-var MZ_JYU = {lng: 116.135018, lat: 24.33438};
+// 河北农业大学西校区
+var MZ_JYU = {lng: 115.454525, lat: 38.833042};
 // 广外艺
 var GZ_GTC = {lng: 113.345774, lat: 23.153356};
-// 广州市
-var GD_GZS = {lng: 113.256838, lat: 23.157309};
-// 河源市
-var GD_HYS = {lng: 114.701682, lat: 23.754195};
+// 保定市
+var GD_GZS = {lng: 115.486575, lat: 38.869044};
+// 大连理工大学
+var GD_HYS = {lng: 121.823007, lat: 39.088081};
 // 背景音乐
 var MUSIC;
 
@@ -230,12 +230,12 @@ function panZoom_HEY() {
             setTimeout(function() {
                 var between = [
                     {
-                        title: '梅州 → 广州',
+                        title: '保定 → 大连',
                         content: '426 km.',
                         point: MZ_JYU
                     },
                     {
-                        title: '梅州 → 广州',
+                        title: '保定 → 大连',
                         content: '5 hours by train.',
                         point: GZ_GTC
                     },
@@ -1162,34 +1162,40 @@ function loadScript() {
 
 window.onload = function() {
     var imglist = [
-        'http://lukesign.qiniudn.com/images/ticket.jpg',
-        'http://lukesign.qiniudn.com/images/beijingroad.jpg',
-        'http://lukesign.qiniudn.com/images/chenjiaci.jpg',
-        'http://lukesign.qiniudn.com/images/chenjiaci1.jpg',
-        'http://lukesign.qiniudn.com/images/chenjiaci2.jpg',
-        'http://lukesign.qiniudn.com/images/dianying.jpg',
-        'http://lukesign.qiniudn.com/images/dress1.jpg',
-        'http://lukesign.qiniudn.com/images/dress2.jpg',
-        'http://lukesign.qiniudn.com/images/jiniantang.jpg',
-        'http://lukesign.qiniudn.com/images/leave.jpg',
-        'http://lukesign.qiniudn.com/images/s.jpg',
-        'http://lukesign.qiniudn.com/images/sea.jpg',
-        'http://lukesign.qiniudn.com/images/you.jpg',
-        'http://lukesign.qiniudn.com/images/wannato/fenghuang.jpg',
-        'http://lukesign.qiniudn.com/images/wannato/guilin.jpg',
-        'http://lukesign.qiniudn.com/images/wannato/xiamen.jpg',
-        'http://lukesign.qiniudn.com/images/wannato/xihu.jpg',
-        'http://lukesign.qiniudn.com/images/wannato/xizang.jpg'
+        // 'http://lukesign.qiniudn.com/images/ticket.jpg',
+        // 'http://lukesign.qiniudn.com/images/beijingroad.jpg',
+        // 'http://lukesign.qiniudn.com/images/chenjiaci.jpg',
+        // 'http://lukesign.qiniudn.com/images/chenjiaci1.jpg',
+        // 'http://lukesign.qiniudn.com/images/chenjiaci2.jpg',
+        // 'http://lukesign.qiniudn.com/images/dianying.jpg',
+        // 'http://lukesign.qiniudn.com/images/dress1.jpg',
+        // 'http://lukesign.qiniudn.com/images/dress2.jpg',
+        // 'http://lukesign.qiniudn.com/images/jiniantang.jpg',
+        // 'http://lukesign.qiniudn.com/images/leave.jpg',
+        // 'http://lukesign.qiniudn.com/images/s.jpg',
+        // 'http://lukesign.qiniudn.com/images/sea.jpg',
+        // 'http://lukesign.qiniudn.com/images/you.jpg',
+        // 'http://lukesign.qiniudn.com/images/wannato/fenghuang.jpg',
+        // 'http://lukesign.qiniudn.com/images/wannato/guilin.jpg',
+        // 'http://lukesign.qiniudn.com/images/wannato/xiamen.jpg',
+        // 'http://lukesign.qiniudn.com/images/wannato/xihu.jpg',
+        // 'http://lukesign.qiniudn.com/images/wannato/xizang.jpg'
     ];
 
     soundManager.setup({
-        url: 'http://lukesign.qiniudn.com/sm/',
-        onready: initMP3
+        url: '/Users/cuishuying/dandanpresent/mapGift/sm/swf/',
+        onready: function(){
+            if(soundManager.ok()){
+                initMP3();
+            }
+        },
+        ontimeout:function(){
+            alert("有点问题，找小崔！");
+        }
     });
 
     function initMP3() {
-
-        MUSIC = soundManager.createSound({
+      MUSIC = soundManager.createSound({
             id: 'mp3',
             url: './LemonTree.mp3',
             onload: function() {
@@ -1214,7 +1220,7 @@ window.onload = function() {
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c142366bae08a5add7c3c1ce2703b10d";
+  hm.src = "http://hm.baidu.com/hm.js?c142366bae08a5add7c3c1ce2703b10d";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
